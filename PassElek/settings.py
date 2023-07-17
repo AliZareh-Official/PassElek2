@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'server_name',
-    '16.170.248.48',
+    '16.171.159.120',
     'www.passElektronik.com.tr',
     'passelektronik.com.tr',
 ]
