@@ -1,0 +1,275 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+    <!-- Carousel Start -->
+    <div class="container-fluid px-0 mb-5">
+    <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="{% static 'img/carousel-1.png' %}" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 text-start">
+                                <h1 class="display-1 text-white mb-5 animated slideInRight handwriting">
+                                    {% trans "PASS ELEKTRONİK  BİLİŞİM SİSTEMLERİ" %}
+                                </h1>
+                                <a href="{% url 'about_us' %}" class="btn btn-primary py-3 px-5 animated slideInRight">
+                                    {% trans "Hizmetlerimizi Keşfedin" %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="{% static 'img/carousel-2.png' %}" alt="Image">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-10 text-start">
+                                <p class="fs-5 fw-medium text-primary text-uppercase animated slideInRight">
+                                    {% trans "Özel Çözümlerle Güvenliği Kişiselleştirin" %}
+                                </p>
+                                <h1 class="display-1 text-white mb-5 animated slideInRight handwriting">
+                                    {% trans "Doğru Ürün, Doğru Çözüm, Doğru Fiyat" %}
+                                </h1>
+                                <a href="{% url 'about_us' %}" class="btn btn-primary py-3 px-5 animated slideInRight">
+                                    {% trans "Hizmetlerimizi Keşfedin" %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{% trans "Önceki" %}</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">{% trans "Sonraki" %}</span>
+        </button>
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+   <!-- Features Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="position-relative me-lg-4">
+                    <img class="img-fluid w-100" src="{% static 'img/feature.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <h1 class="display-5 mb-4">{% trans "Size Özel Güvenlik Çözümleri" %}</h1>
+                <p class="mb-4">
+                    {% trans "Pass Elektronik olarak, sizin için en uygun güvenlik çözümlerini sunmaktayız. İhtiyaçlarınızı anlıyoruz ve güvenlik stratejilerinizi optimize etmenize yardımcı oluyoruz. Size özel tasarlanmış çözümlerimizle varlıklarınızı ve geleceğinizi koruyoruz." %}
+                </p>
+                <div class="row gy-4">
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>{% trans "Teknoloji Uyumluluğu" %}</h4>
+                                <span>{% trans "En son güvenlik teknolojileriyle uyumlu çözümler sunuyoruz." %}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>{% trans "Özelleştirilmiş Çözümler" %}</h4>
+                                <span>{% trans "Güvenlik ihtiyaçlarınıza özel çözümler sunuyoruz." %}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-primary">
+                                <i class="fa fa-check text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h4>{% trans "Deneyim ve Uzmanlık" %}</h4>
+                                <span>{% trans "4 yıllık deneyimimiz ve sektördeki uzmanlığımızla sizlere güvenilir çözümler sunuyoruz." %}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features End -->
+
+    <!-- Facts Start -->
+<div class="container-fluid facts my-5 p-5">
+    <div class="row g-5">
+        <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="text-center border p-5">
+                <i class="fa fa-certificate fa-3x text-white mb-3"></i>
+                <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">4</h1>
+                <span class="fs-5 fw-semi-bold text-white">{% trans "DENEYİM YİLLARİ" %}</span>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.3s">
+            <div class="text-center border p-5">
+                <i class="fa fas fa-handshake fa-3x text-white mb-3"></i>
+                <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">160</h1>
+                <span class="fs-5 fw-semi-bold text-white">{% trans "KİRALAMA HİZMETLERİ" %}</span>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.5s">
+            <div class="text-center border p-5">
+                <i class="fas fa-x-ray fa-3x text-white mb-3"></i>
+                <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">957</h1>
+                <span class="fs-5 fw-semi-bold text-white">{% trans "X-RAY SİSTEMLER" %}</span>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-3 wow fadeIn" data-wow-delay="0.7s">
+            <div class="text-center border p-5">
+                <i class="fas fa-broadcast-tower fa-3x text-white mb-3"></i>
+                <h1 class="display-2 text-primary mb-0" data-toggle="counter-up">625</h1>
+                <span class="fs-5 fw-semi-bold text-white">{% trans "TELSİZ SİSTEMLER" %}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Facts End -->
+
+    <!-- Service Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="fw-medium text-uppercase text-primary mb-2">{% trans "Güvenlik Çözümlerimiz" %}</p>
+            <h1 class="display-5 mb-4">{% trans "Size Özel Hizmetler" %}</h1>
+        </div>
+        <div class="row gy-5 gx-4">
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item">
+                    <img class="img-fluid" src="{% static 'img/service-1.png' %}" alt="">
+                    <div class="service-img">
+                        <img class="img-fluid" src="{% static 'img/service-1.png' %}" alt="">
+                    </div>
+                    <div class="service-detail">
+                        <div class="service-title">
+                            <hr class="w-25">
+                            <h3 class="mb-0">{% trans "Güvenlik Ürünleri" %}</h3>
+                            <hr class="w-25">
+                        </div>
+                        <div class="service-text">
+                            <p class="text-white mb-0">{% trans "Geniş bir güvenlik ürünleri yelpazesi sunuyoruz. İhtiyaçlarınıza uygun çözümlerle güvenliğinizi sağlıyoruz." %}</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-light" href="{% url 'hizmetler' %}">{% trans "Daha Fazla Bilgi" %}</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-item">
+                    <img class="img-fluid" src="{% static 'img/service-2.png' %}" alt="">
+                    <div class="service-img">
+                        <img class="img-fluid" src="{% static 'img/service-2.png' %}" alt="">
+                    </div>
+                    <div class="service-detail">
+                        <div class="service-title">
+                            <hr class="w-25">
+                            <h3 class="mb-0">{% trans "Bakım Hizmetleri" %}</h3>
+                            <hr class="w-25">
+                        </div>
+                        <div class="service-text">
+                            <p class="text-white mb-0">{% trans "Alanında uzman teknisyenlerimiz, güvenlik cihazlarınızın onarımını hızlı ve profesyonel bir şekilde gerçekleştirir." %}</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-light" href="{% url 'hizmetler' %}">{% trans "Daha Fazla Bilgi" %}</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="service-item">
+                    <img class="img-fluid" src="{% static 'img/service-3.png' %}" alt="">
+                    <div class="service-img">
+                        <img class="img-fluid" src="{% static 'img/service-3.png' %}" alt="">
+                    </div>
+                    <div class="service-detail">
+                        <div class="service-title">
+                            <hr class="w-25">
+                            <h3 class="mb-0">{% trans "Kiralama Hizmetleri" %}</h3>
+                            <hr class="w-25">
+                        </div>
+                        <div class="service-text">
+                            <p class="text-white mb-0">{% trans "Geçici ihtiyaçlarınız için güvenlik ekipmanlarını kiralayabilirsiniz. Esnek kiralama seçenekleri sunuyoruz." %}</p>
+                        </div>
+                    </div>
+                    <a class="btn btn-light" href="{% url 'hizmetler' %}">{% trans "Daha Fazla Bilgi" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+
+
+{#<div class="container-xxl py-5">#}
+{#    <div class="container">#}
+{#        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">#}
+{#            <p class="fw-medium text-uppercase text-primary mb-2">Müşteri Yorumları</p>#}
+{#            <h1 class="display-5 mb-5">Müşterilerimizin Söyledikleri</h1>#}
+{#        </div>#}
+{#        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">#}
+{#            <div class="testimonial-item text-center">#}
+{#                <div class="testimonial-img position-relative">#}
+{#                    <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-1.jpg">#}
+{#                    <div class="btn-square bg-primary rounded-circle">#}
+{#                        <i class="fa fa-quote-left text-white"></i>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="testimonial-text text-center rounded p-4">#}
+{#                    <p>Pass Elektronik, bize güvenlik konusunda mükemmel hizmetler sundu. Ekip çok profesyonel ve işlerini özenle yapıyorlar. Kesinlikle tavsiye ederim.</p>#}
+{#                    <h5 class="mb-1">Ahmet Yılmaz</h5>#}
+{#                    <span class="fst-italic">İşletme Sahibi</span>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="testimonial-item text-center">#}
+{#                <div class="testimonial-img position-relative">#}
+{#                    <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-2.jpg">#}
+{#                    <div class="btn-square bg-primary rounded-circle">#}
+{#                        <i class="fa fa-quote-left text-white"></i>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="testimonial-text text-center rounded p-4">#}
+{#                    <p>Pass Elektronik, bizi güvenlik konusunda çok etkili çözümlerle destekledi. Personelleri son derece yardımsever ve profesyonel. Memnuniyetimizi sağladıkları için teşekkür ederiz.</p>#}
+{#                    <h5 class="mb-1">Ayşe Demir</h5>#}
+{#                    <span class="fst-italic">İnsan Kaynakları Yöneticisi</span>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="testimonial-item text-center">#}
+{#                <div class="testimonial-img position-relative">#}
+{#                    <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-3.jpg">#}
+{#                    <div class="btn-square bg-primary rounded-circle">#}
+{#                        <i class="fa fa-quote-left text-white"></i>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="testimonial-text text-center rounded p-4">#}
+{#                    <p>Pass Elektronik, güvenlik ihtiyaçlarımızı eksiksiz bir şekilde karşıladı. Müşteri odaklı yaklaşımları ve kaliteli hizmetleri sayesinde güvenle çalışıyoruz. Harika bir ekip!</p>#}
+{#                    <h5 class="mb-1">Mehmet Kaya</h5>#}
+{#                    <span class="fst-italic">Genel Müdür</span>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+
+
+{% endblock %}
+
+

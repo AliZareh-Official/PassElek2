@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Features Start -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/hizmetler.css' %}">
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white animated slideInRight">{% trans "Hizmetler" %}</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb animated slideInRight mb-0">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans "Ana Sayfa" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'urunler' %}">{% trans "Ürünler" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'iletsim' %}">{% trans "İletişim" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'iletsim' %}">{% trans "Hakkımızda" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% trans "Hizmetler" %}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+   <div class="row">
+    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        <div class="card service-wrapper rounded border-0 shadow p-4">
+            <div class="icon text-center text-custom h1 shadow rounded bg-white">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="content mt-4">
+                <h5 class="title">{% trans "Güvenlik Çözümleri" %}</h5>
+                <p class="text-muted mt-3 mb-0">{% trans "En son teknolojiyle donatılmış güvenlik çözümleri sunuyoruz. Müşterilerimizin güvenliğini en üst düzeyde sağlamak için gelişmiş ve kapsamlı güvenlik çözümleri sunuyoruz. Eviniz, iş yeriniz veya kurumunuz için ihtiyaçlarınıza uygun güvenlik sistemlerini tasarlıyor ve kuruyoruz." %}</p>
+            </div>
+            <div class="big-icon h1 text-custom">
+                <i class="fa fa-shield-alt"></i>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        <div class="card service-wrapper rounded border-0 shadow p-4">
+            <div class="icon text-center text-custom h1 shadow rounded bg-white">
+                <i class="fa fa-cogs"></i>
+            </div>
+            <div class="content mt-4">
+                <h5 class="title">{% trans "Bakım ve Onarım" %}</h5>
+                <p class="text-muted mt-3 mb-0">{% trans "Güvenlik ekipmanlarının bakım ve onarımını gerçekleştiriyoruz. Güvenlik sistemleri düzenli bakım gerektirir ve zaman içinde arızalar meydana gelebilir. Alanında uzman teknisyenlerimiz, eksiksiz bakım ve hızlı onarım hizmetleri sunarak, güvenlik sistemlerinizin sürekli olarak çalışmasını sağlar." %}</p>
+            </div>
+            <div class="big-icon h1 text-custom">
+                <i class="fa fa-cogs"></i>
+            </div>
+        </div>
+    </div><!--end col-->
+
+    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        <div class="card service-wrapper rounded border-0 shadow p-4">
+            <div class="icon text-center text-custom h1 shadow rounded bg-white">
+                <i class="fa fa-lock"></i>
+            </div>
+            <div class="content mt-4">
+                <h5 class="title">{% trans "Güvenlik Danışmanlığı" %}</h5>
+                <p class="text-muted mt-3 mb-0">{% trans "Müşterilerimize güvenlik konusunda uzman danışmanlık hizmetleri sunuyoruz. Güvenlik ihtiyaçlarınızı anlamak ve en etkili güvenlik çözümlerini sağlamak için deneyimli danışmanlarımızla birlikte çalışıyoruz. Kurumunuzun veya bireysel güvenliğinizin gereksinimlerini değerlendiriyor ve size özelleştirilmiş bir çözüm sunuyoruz." %}</p>
+            </div>
+            <div class="big-icon h1 text-custom">
+                <i class="fa fa-lock"></i>
+            </div>
+        </div>
+    </div><!--end col-->
+
+    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        <div class="card service-wrapper rounded border-0 shadow p-4">
+            <div class="icon text-center text-custom h1 shadow rounded bg-white">
+                <i class="fa fa-wifi"></i>
+            </div>
+            <div class="content mt-4">
+                <h5 class="title">{% trans "Telsiz Cihazları" %}</h5>
+                <p class="text-muted mt-3 mb-0">{% trans "Güvenli ve etkili iletişim için telsiz cihazları sağlıyoruz. İhtiyaçlarınıza uygun, güçlü sinyal özelliklerine sahip ve kullanımı kolay telsiz cihazları sunuyoruz. Bu cihazlar, personelinizin birbirleriyle hızlı ve güvenilir bir şekilde iletişim kurmasını sağlar. Hem iç mekanlarda hem de açık alanlarda güvenlik personelinizin koordinasyonunu sağlamak için telsiz sistemleriyle donatılmış olun." %}</p>
+            </div>
+            <div class="big-icon h1 text-custom">
+                <i class="fa fa-wifi"></i>
+            </div>
+        </div>
+    </div><!--end col-->
+    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        <div class="card service-wrapper rounded border-0 shadow p-4">
+            <div class="icon text-center text-custom h1 shadow rounded bg-white">
+                <i class="fa fa-key"></i>
+            </div>
+            <div class="content mt-4">
+                <h5 class="title">{% trans "Geçiş Kontrol Sistemleri" %}</h5>
+                <p class="text-muted mt-3 mb-0">{% trans "Güvenlikli geçiş kontrol sistemleriyle kurum ve kuruluşlarınızı koruyun. Yüksek güvenlikli geçiş kontrol sistemleri ile yetkilendirilmemiş erişimi engelleyebilir, personel ve ziyaretçilerin kontrolünü sağlayabilirsiniz. Akıllı kartlar, parmak izi okuyucuları ve yüz tanıma sistemleri gibi çeşitli teknolojilerle güvenliği sağlayan geçiş kontrol sistemlerini sunuyoruz." %}</p>
+            </div>
+            <div class="big-icon h1 text-custom">
+                <i class="fa fa-key"></i>
+            </div>
+        </div>
+    </div><!--end col-->
+
+    <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        <div class="card service-wrapper rounded border-0 shadow p-4">
+            <div class="icon text-center text-custom h1 shadow rounded bg-white">
+                <i class="fa fa-cogs"></i>
+            </div>
+            <div class="content mt-4">
+                <h5 class="title">{% trans "Güvenlik Cihazları" %}</h5>
+                <p class="text-muted mt-3 mb-0">{% trans "Gelişmiş ve güvenilir güvenlik cihazları sağlıyoruz. Müşterilerimize, yüksek performanslı ve güvenilir cihazlarla donatılmış güvenlik sistemleri sunmaktayız. İhtiyaçlarınıza uygun olarak, alarm sistemleri, hareket dedektörleri, yangın alarm sistemleri, gaz dedektörleri ve daha birçok cihazı sağlamaktayız. Güvenlik cihazlarımız, sizi ve mülkünüzü 24 saat boyunca koruma altında tutar." %}</p>
+            </div>
+            <div class="big-icon h1 text-custom">
+                <i class="fa fa-cogs"></i>
+            </div>
+        </div>
+    </div><!--end col-->
+</div><!--end row-->
+
+
+
+
+
+{% endblock %}

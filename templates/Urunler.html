@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+
+        /* Animate the button color and border */
+        .nav-item .nav-link {
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Add a hover effect to the buttons */
+        .nav-item .nav-link:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Add an active state to the buttons */
+        .nav-item .nav-link.active {
+            background-color: #fff;
+            border-color: #ddd;
+        }
+
+        /* Animate the active button indicator */
+        .nav-tabs::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #333;
+            transition: width 0.3s ease;
+        }
+
+        .nav-item .nav-link.active::before {
+            width: 100%;
+        }
+
+        /* Animate the button text color */
+        .nav-item .nav-link {
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item .nav-link:hover,
+        .nav-item .nav-link.active {
+            color: #000;
+        }
+
+    </style>
+    <!-- Features Start -->
+    {% load static %}
+    {% load i18n %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white animated slideInRight">{% trans "Ürünler" %}</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb animated slideInRight mb-0">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans "Ana Sayfa" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'about_us' %}">{% trans "Hakkımızda" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'hizmetler' %}">{% trans "Hizmetler" %}</a></li>
+                    <li class="breadcrumb-item"><a href="{% url 'iletsim' %}">{% trans "İletişim" %}</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{% trans "Ürünler" %}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Header End -->
+
+    <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+        {% for category in categories %}
+            <li class="nav-item" role="presentation">
+                <button class="nav-link{% if forloop.first %} active{% endif %}" id="{{ category.name }}-tab" data-bs-toggle="tab" data-bs-target="#{{ category.name }}" type="button" role="tab" aria-controls="{{ category.name }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">
+                    {% trans category.name %}
+                </button>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        {% for category in categories %}
+            <div class="tab-pane fade{% if forloop.first %} show active{% endif %}" id="{{ category.name }}" role="tabpanel" aria-labelledby="{{ category.name }}-tab">
+                <div class="row">
+                    {% for product in category.product_set.all %}
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <img src="{{ product.picture.url }}" class="card-img-top" alt="{{ product.name }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ product.name }}</h5>
+                                    <p class="card-text">{{ product.features|linebreaksbr }}</p>
+                                    {% if product.price %}
+                                        <p class="card-text">{{ product.price|floatformat:2 }} $</p>
+                                    {% endif %}
+                                </div>
+                                <div class="card-footer">
+                                    <a href="{% url 'iletsim' %}" class="btn btn-primary">{% trans "Teklif Al" %}</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
+
+{% endblock %}
