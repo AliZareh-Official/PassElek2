@@ -26,9 +26,8 @@ SECRET_KEY = 'django-insecure-s)=+50e1n3be%@in1d$rykxgkz^2y)y$i4oig8entb8c%-x2ye
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'server_name',
-    '16.171.159.120',
     'www.passElektronik.com.tr',
+    '13.53.187.19',
     'passelektronik.com.tr',
 ]
 
